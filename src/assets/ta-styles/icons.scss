@@ -1,0 +1,201 @@
+
+@font-face {
+  font-family: fontIcons;
+  //  src: url('icons/ta-fonts.eot');
+   src: //url('icons/ta-fonts.eot?#iefix') format('embedded-opentype'),
+        url('icons/ta-fonts.ttf') format('truetype'),
+        url('icons//ta-fonts.woff') format('woff'),
+        url('icons/ta-fonts.svg#ProductIconsFontvNew') format('svg');
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.ta-icon {
+  &::before {
+    font-family: fontIcons;
+    font-style: normal;
+    font-weight: unset;
+    font-size: inherit;
+    color: inherit;
+    text-transform: initial;
+    line-height: initial;
+  }
+  &.ic {
+    &-cash-machine:before {
+      content: "A";
+    }
+    &-invoicing:before {
+      content: "B";
+    }
+    &-user-manager:before {
+      content: "C";
+    }
+    &-example:before {
+      content: "";
+    }
+    &-goods:before {
+      content: "L";
+    }
+    &-close:before {
+      content: "M";
+    }
+    &-delete:before {
+      content: "D";
+    }
+    &-reset:before {
+      content: "E";
+    }
+    &-edit:before {
+      content: "G";
+    }
+    &-circle-edit:before {
+      content: "F";
+    }
+    &-arrow-up:before {
+      content: "K";
+    }
+    &-arrow-down:before {
+      content: "J";
+    }
+    &-arrow-triang-right:before {
+      content: "H";
+    }
+    &-arrow-triang-down:before {
+      content: "I";
+    }
+    &-monitoring:before {
+      content: "N";
+    }
+    &-settings:before {
+      content: "O";
+    }
+    &-manual-approve:before {
+      content: "R";
+    }
+    &-change-pass:before {
+      content: "S";
+    }
+    &-info:before {
+      content: "T";
+    }
+    &-excel:before {
+      content: "Q";
+    }
+    &-download:before {
+      content: "U";
+    }
+    &-regenerate:before {
+      content: "P";
+    }
+    &-archive:before {
+      content: "V";
+    }
+    &-copy:before {
+      content: "W";
+    }
+    &-back-arrow:before {
+      content: "X";
+    }
+    &-view:before {
+      content: "Y";
+    }
+    &-show-pass:before {
+      content: "Z";
+    }
+    &-table:before {
+      content: "a";
+    }
+    &-plus:before {
+      content: "b";
+    }
+    &-credit-note:before {
+      content: "c";
+    }
+    &-debit-note:before {
+      content: "d";
+    }
+    &-bad-debt::before {
+      content: "e";
+    }
+    &-cancel:before {
+      content: "f";
+    }
+    &-search:before {
+      content: "g";
+    }
+    &-success:before {
+      content: "h";
+    }
+    &-error:before {
+      content: "i";
+    }
+    &-warning:before {
+      content: "j";
+    }
+    &-circle-info:before {
+      content: "k";
+    }
+    &-megaphone:before {
+      content: "l";
+    }
+    &-taxpayer-request:before {
+      content: "m";
+    }
+    &-taxpayer-events:before {
+      content: "n";
+    }
+    &-faq:before {
+      content: "o";
+    }
+    &-taxpayer-contact-update:before {
+      content: "p";
+    }
+    &-audit-data-request:before {
+      content: "q";
+    }
+    &-notification:before {
+      content: "r";
+    }
+    &-tax-calendar:before {
+      content: "s";
+    }
+    &-upload:before {
+      content: "t";
+    }
+    &-assign:before {
+      content: "u";
+    }
+    &-home:before {
+      content: "w";
+    }
+    &-applications:before {
+      content: "v";
+    }
+    &-file-edit:before {
+      content: "x";
+    }
+    &-file-view:before {
+      content: "y";
+    }
+    &-attach:before {
+      content: "z";
+    }
+    &-deregister:before {
+      content: "9";
+    }
+    &-approve:before {
+      content: "8";
+    }
+    &-activate:before {
+      content: "0";
+    }
+    &-deactivate:before {
+      content: "1";
+    }
+    &-bad-debt-paid:before {
+      content: "2";
+    }
+  }
+}

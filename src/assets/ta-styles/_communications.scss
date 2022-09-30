@@ -1,0 +1,153 @@
+.mat-accordion.info-accordion {
+  &.new-label {
+    .mat-expansion-panel-header {
+      background-color: #defcfa!important;
+      .mat-content {
+        position: relative;
+        flex: initial;
+        padding-right: 2.5rem;
+        &::after {
+          content: "";
+          position: absolute;
+          margin: auto;
+          right: 1.5rem;
+          height: 0.5rem;
+          width: 0.5rem;
+          border-radius: 50%;
+          background-color: #2bc9bf;
+          top: 0;
+          bottom: 0;
+        }
+      }
+      .mat-expansion-indicator {
+        margin-left: auto;
+      }
+    }
+  }
+  display: flex;
+  .mat-expansion-panel {
+    box-shadow: none;
+    width: 100%;
+  }
+  .mat-expansion-panel-header {
+    background-color: #EFF1F4!important;
+    padding: 1rem 1.5rem;
+    min-height: 3.5rem;
+    height: auto;
+    border-radius: 0.8rem;
+  }
+  .mat-expansion-panel-body {
+    padding: 1rem 0.1rem 0;
+  }
+}
+
+.text-grey {
+  color: #778197;
+}
+.border-bottom-grey {
+  position: relative;
+  border-bottom: 1px solid rgba(9, 24, 58, 0.12);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  &:last-child {
+    border-bottom: 0px solid;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+.ic-arrow-down {
+  height: 0.3rem;
+}
+file-upload.communications {
+  background: transparent!important;
+  outline: none!important;
+  padding: 0!important;
+  min-height: auto!important;
+  outline-offset: 0!important;
+  display: flex!important;
+    .upload-input {
+      display: contents!important;
+      position: static!important;
+      color: #3C4F7D!important;
+      transform: none!important;
+    }
+    .upload-list {
+      width: 50%!important;
+    }
+    .upload-block {
+      display: block!important;
+      background: #fafafa!important;
+      padding: 2rem!important;
+      min-height: 1rem!important;
+      outline: 1px dashed #92b0b3!important;
+      outline-offset: -1rem!important;
+      position: relative!important;
+    }
+}
+.delete-file-btn {
+  background: transparent;
+  font-size: 1.25rem;
+  border: none;
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+.download-file {
+  cursor: pointer;
+  color: #000;
+  &:hover {
+    color: #22B89E;
+  }
+  &>span {
+    transition: 0.2s linear 0s;
+  }
+}
+.upload-disabled {
+  pointer-events: none;
+}
+.accordion-paginator.mat-paginator {
+  background-color: transparent;
+  font-size: 1rem;
+  .mat-paginator-container {
+    justify-content: center;
+    padding: 1rem 0.5rem;
+  }
+}
+.only-month-day-picker {
+  height: 290px!important;
+
+  .mat-calendar-body {
+    display: flex;
+    flex-wrap: wrap;
+    tr {
+      display: contents;
+    }
+    .mat-calendar-body-label {
+      width: 100%;
+      padding-bottom: 0 !important;
+      padding-top: 0 !important;
+      position: relative;
+      top: -1rem;
+    }
+  }
+  .mat-calendar-controls {
+    margin: 0;
+    .mat-button {
+      display: none;
+    }
+  }
+  .mat-calendar-table-header {
+    display: none;
+  }
+}
+
+.communication {
+  .mat-form-field.mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline-start,
+  .mat-form-field.mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline-end {
+    background-color: transparent;
+    border-color: #e1e3e7;
+  }
+  .mat-input-element:disabled {
+    color: #09183a;
+  }
+}

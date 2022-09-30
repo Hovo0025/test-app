@@ -1,0 +1,13 @@
+<app-header (triggerSidenav)="onTriggerSidenav()"></app-header>
+<mat-sidenav-container class="sidenav-container container-fluid" (backdropClick)="onTriggerSidenav()">
+  <mat-sidenav class="sidenav-left" [opened]="!isMobile || isSidenavOpened" [mode]="isMobile ? 'push' : 'side'" #sidenav>
+    <app-left-menu [routes]="navbarRoute">
+    </app-left-menu>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="sidenav-content">
+    <div class="client-area px-4 py-4" id="main">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

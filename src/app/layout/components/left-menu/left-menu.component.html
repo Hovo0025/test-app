@@ -1,0 +1,13 @@
+<div class="left-menu h-full">
+  <mat-accordion class="ta-accordion-reset">
+
+    <ng-container *ngFor="let route of routes">
+      <div class="left-menu-subitem" [routerLink]="route.routeLink"
+           routerLinkActive="active"
+           [routerLinkActiveOptions]="route.routerLinkActiveOptions || {exact: true}">
+        <span class="left-menu-text">{{route.label }}</span>
+      </div>
+    </ng-container>
+
+  </mat-accordion>
+</div>

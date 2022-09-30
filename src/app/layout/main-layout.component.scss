@@ -1,0 +1,29 @@
+.sidenav {
+  &-container {
+    height: calc(100vh - 4.5rem);
+  }
+  &-content {
+  }
+  &-left {
+    width: 90%;
+    max-width: 24rem!important;
+    border: none;
+  }
+}
+.profile-info {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+@media screen and (min-width: 800px){
+  .profile-info {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .client-area {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

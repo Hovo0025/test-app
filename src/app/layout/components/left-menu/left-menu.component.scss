@@ -1,0 +1,124 @@
+.left-menu {
+  background-color: #1E2D3B;
+  padding-top: 1.5rem;
+  overflow: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &-icon {
+    width: 2rem;
+    height: 2rem;
+    background-color: #22B89E;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    i {
+      color: #fff;
+    }
+  }
+  &-text {
+    padding: 0 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+    height: 3.25rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.25rem 1.25rem;
+    transition: background-color 0.2s linear 0s;
+
+    &:hover {
+      background-color: #182531;
+    }
+    &.link {
+      &.active {
+        color: #22B89E;
+      }
+    }
+  }
+
+  &-subitem {
+    font-weight: 600;
+    padding: 0 1.25rem 0 0.5rem;
+    height: 3.25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    border: unset;
+    outline: none;
+    transition: color 0.2s linear 0s;
+    &:hover {
+      color: #22B89E;
+    }
+    .left-menu-text {
+      font-size: 1.4rem;
+      font-weight: 400;
+      display: flex;
+    }
+    &.active {
+      color: #22B89E;
+      font-weight: 600;
+    }
+  }
+
+  .ta-accordion-reset {
+    .mat-expansion-panel {
+      box-shadow: none;
+      background-color: transparent;
+      color: #fff;
+      margin: 0;
+      transition: background-color 0.2s linear 0s;
+
+      &-header {
+        padding: 0 1.25rem 0 0;
+        height: 3.25rem;
+        transition: background-color 0.2s linear 0s;
+        &:hover {
+          background-color: #182531;
+        }
+      }
+      &.mat-expanded {
+        background-color: #182531;
+      }
+    }
+
+    .left-menu-subitem-accordion {
+      padding-left: 2.5rem;
+
+      .left-menu-subitem, .left-menu-text {
+        padding-left: 0;
+      }
+      .mat-expansion-panel-header {
+        min-height: 2.25rem;
+        height: auto;
+      }
+      .left-menu-text {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+    }
+  }
+}
+::ng-deep {
+  mat-expansion-panel-header .mat-content {
+    overflow: visible;
+  }
+  .mat-expansion-panel-body .mat-expansion-panel-body {
+    padding: 0.3rem 0 0.3rem 1.5rem;
+  }
+}
+.version-info {
+  color: #fff;
+  font-size: 0.8rem;
+}

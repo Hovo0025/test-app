@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    @font-face {
+      font-family: fontIcons;
+      src: url('ta-fonts.ttf') format('truetype'),
+        url('ta-fonts.woff') format('woff'),
+        url('ta-fonts.svg#ProductIconsFontvNew') format('svg');
+
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    .parent {
+      display: grid;
+      grid-template-columns: auto auto auto auto auto auto ;
+    }
+    .parent i {
+      font-size: 50px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .parent div {
+      padding: 10px;
+      border: 1px solid;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .ta-icon::before {
+      font-family: fontIcons;
+      font-style: normal;
+      font-weight: unset;
+      font-size: inherit;
+      color: inherit;
+      text-transform: initial;
+      line-height: initial;
+    }
+
+    .ic-cash-machine:before {
+      content: "A";
+    }
+
+    .ic-invoicing:before {
+      content: "B";
+    }
+
+    .ic-user-manager:before {
+      content: "C";
+    }
+
+
+    .ic-goods:before {
+      content: "L";
+    }
+
+    .ic-close:before {
+      content: "M";
+    }
+
+    .ic-delete:before {
+      content: "D";
+    }
+
+    .ic-reset:before {
+      content: "E";
+    }
+
+    .ic-edit:before {
+      content: "G";
+    }
+
+    .ic-circle-edit:before {
+      content: "F";
+    }
+
+    .ic-arrow-up:before {
+      content: "K";
+    }
+
+    .ic-arrow-down:before {
+      content: "J";
+    }
+
+    .ic-arrow-triang-right:before {
+      content: "H";
+    }
+
+    .ic-arrow-triang-down:before {
+      content: "I";
+    }
+
+    .ic-monitoring:before {
+      content: "N";
+    }
+
+    .ic-settings:before {
+      content: "O";
+    }
+
+    .ic-manual-approve:before {
+      content: "R";
+    }
+
+    .ic-change-pass:before {
+      content: "S";
+    }
+
+    .ic-info:before {
+      content: "T";
+    }
+
+    .ic-excel:before {
+      content: "Q";
+    }
+
+    .ic-download:before {
+      content: "U";
+    }
+
+    .ic-regenerate:before {
+      content: "P";
+    }
+
+    .ic-archive:before {
+      content: "V";
+    }
+
+    .ic-copy:before {
+      content: "W";
+    }
+
+    .ic-back-arrow:before {
+      content: "X";
+    }
+
+    .ic-view:before {
+      content: "Y";
+    }
+
+    .ic-show-pass:before {
+      content: "Z";
+    }
+
+    .ic-table:before {
+      content: "a";
+    }
+
+    .ic-plus:before {
+      content: "b";
+    }
+
+    .ic-credit-note:before {
+      content: "c";
+    }
+
+    .ic-debit-note:before {
+      content: "d";
+    }
+
+    .ic-bad-debt::before {
+      content: "e";
+    }
+
+    .ic-cancel:before {
+      content: "f";
+    }
+
+    .ic-search:before {
+      content: "g";
+    }
+
+    .ic-success:before {
+      content: "h";
+    }
+
+    .ic-error:before {
+      content: "i";
+    }
+
+    .ic-warning:before {
+      content: "j";
+    }
+
+    .ic-circle-info:before {
+      content: "k";
+    }
+
+    .ic-megaphone:before {
+      content: "l";
+    }
+    .ic-taxpayer-request:before {
+      content: "m";
+    }
+    .ic-public-announcements:before {
+      content: "n";
+    }
+    .ic-faq:before {
+      content: "o";
+    }
+    .ic-taxpayer-contact-update:before {
+      content: "p";
+    }
+    .ic-audit-data-request:before {
+      content: "q";
+    }
+    .ic-notification:before {
+      content: "r";
+    }
+    .ic-tax-calendar:before {
+      content: "s";
+    }
+    .ic-upload:before {
+      content: "t";
+    }
+    .ic-assign:before {
+      content: "u";
+    }
+    .ic-home:before {
+      content: "w";
+    }
+    .ic-applications:before {
+      content: "v";
+    }
+    .ic-file-edit:before {
+      content: "x";
+    }
+    .ic-file-view:before {
+      content: "y";
+    }
+    .ic-attach:before {
+      content: "z";
+    }
+    .ic-deregister:before {
+      content: "9";
+    }
+    .ic-approve:before {
+      content: "8";
+    }
+    .ic-bad-debt-paid:before {
+      content: "2";
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="parent">
+    <div class="">
+      <i class="ta-icon ic-cash-machine"></i>
+      <code>
+      &lt;i class="ta-icon ic-cash-machine"&gt;&lt;/i&gt;
+      </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-invoicing"></i>
+      <code>
+      &lt;i class="ta-icon ic-invoicing"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-user-manager"></i>
+      <code>
+      &lt;i class="ta-icon ic-user-manager"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-goods"></i>
+      <code>
+      &lt;i class="ta-icon ic-goods"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-close"></i>
+      <code>
+      &lt;i class="ta-icon ic-close"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-delete"></i>
+      <code>
+      &lt;i class="ta-icon ic-delete"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-reset"></i>
+      <code>
+      &lt;i class="ta-icon ic-reset"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-edit"></i>
+      <code>
+      &lt;i class="ta-icon ic-edit"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-circle-edit"></i>
+      <code>
+      &lt;i class="ta-icon ic-circle-edit"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-arrow-up"></i>
+      <code>
+      &lt;i class="ta-icon ic-arrow-up"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-arrow-down"></i>
+      <code>
+      &lt;i class="ta-icon ic-arrow-down"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-arrow-triang-right"></i>
+      <code>
+      &lt;i class="ta-icon ic-arrow-triang-right"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-arrow-triang-down"></i>
+      <code>
+      &lt;i class="ta-icon ic-arrow-triang-down"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-monitoring"></i>
+      <code>
+      &lt;i class="ta-icon ic-monitoring"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-settings"></i>
+      <code>
+      &lt;i class="ta-icon ic-settings"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-manual-approve"></i>
+      <code>
+      &lt;i class="ta-icon ic-manual-approve"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-change-pass"></i>
+      <code>
+      &lt;i class="ta-icon ic-change-pass"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-info"></i>
+      <code>
+      &lt;i class="ta-icon ic-info"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-excel"></i>
+      <code>
+      &lt;i class="ta-icon ic-excel"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-download"></i>
+      <code>
+      &lt;i class="ta-icon ic-download"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-regenerate"></i>
+      <code>
+      &lt;i class="ta-icon ic-regenerate"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-archive"></i>
+      <code>
+      &lt;i class="ta-icon ic-archive"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-copy"></i>
+      <code>
+      &lt;i class="ta-icon ic-copy"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-back-arrow"></i>
+      <code>
+      &lt;i class="ta-icon ic-back-arrow"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-view"></i>
+      <code>
+      &lt;i class="ta-icon ic-view"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-show-pass"></i>
+      <code>
+      &lt;i class="ta-icon ic-show-pass"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-table"></i>
+      <code>
+      &lt;i class="ta-icon ic-table"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-plus"></i>
+      <code>
+      &lt;i class="ta-icon ic-plus"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-credit-note"></i>
+      <code>
+      &lt;i class="ta-icon ic-credit-note"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-debit-note"></i>
+      <code>
+      &lt;i class="ta-icon ic-debit-note"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-bad-debt"></i>
+      <code>
+      &lt;i class="ta-icon ic-bad-debt"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-cancel"></i>
+      <code>
+      &lt;i class="ta-icon ic-cancel"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-search"></i>
+      <code>
+      &lt;i class="ta-icon ic-search"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-success"></i>
+      <code>
+      &lt;i class="ta-icon ic-success"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-error"></i>
+      <code>
+      &lt;i class="ta-icon ic-error"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-warning"></i>
+      <code>
+      &lt;i class="ta-icon ic-warning"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-circle-info"></i>
+      <code>
+      &lt;i class="ta-icon ic-circle-info"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-megaphone"></i>
+      <code>
+      &lt;i class="ta-icon ic-megaphone"&gt;&lt;/i&gt;
+    </code>
+    </div>
+    <div class="">
+      <i class="ta-icon ic-taxpayer-request"></i>
+      <code>
+      &lt;i class="ta-icon ic-taxpayer-request"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-public-announcements"></i>
+      <code>
+      &lt;i class="ta-icon ic-public-announcements"&gt;&lt;/i&gt;
+    </code>
+    </div>
+    <div class="">
+      <i class="ta-icon ic-faq"></i>
+      <code>
+      &lt;i class="ta-icon ic-faq"&gt;&lt;/i&gt;
+    </code>
+    </div>
+    <div class="">
+      <i class="ta-icon ic-taxpayer-contact-update"></i>
+      <code>
+      &lt;i class="ta-icon ic-taxpayer-contact-update"&gt;&lt;/i&gt;
+    </code>
+    </div>
+    <div class="">
+      <i class="ta-icon ic-audit-data-request"></i>
+      <code>
+      &lt;i class="ta-icon ic-audit-data-request"&gt;&lt;/i&gt;
+    </code>
+    </div>
+    <div class="">
+      <i class="ta-icon ic-notification"></i>
+      <code>
+      &lt;i class="ta-icon ic-notification"&gt;&lt;/i&gt;
+    </code>
+    </div>
+    <div class="">
+      <i class="ta-icon ic-tax-calendar"></i>
+      <code>
+      &lt;i class="ta-icon ic-tax-calendar"&gt;&lt;/i&gt;
+    </code>
+    </div>
+    <div class="">
+      <i class="ta-icon ic-upload"></i>
+      <code>
+      &lt;i class="ta-icon ic-upload"&gt;&lt;/i&gt;
+    </code>
+    </div>
+    <div class="">
+      <i class="ta-icon ic-assign"></i>
+      <code>
+      &lt;i class="ta-icon ic-assign"&gt;&lt;/i&gt;
+    </code>
+    </div>
+    <div class="">
+      <i class="ta-icon ic-home"></i>
+      <code>
+      &lt;i class="ta-icon ic-home"&gt;&lt;/i&gt;
+    </code>
+    </div>
+    <div class="">
+      <i class="ta-icon ic-applications"></i>
+      <code>
+      &lt;i class="ta-icon ic-applications"&gt;&lt;/i&gt;
+    </code>
+    </div>
+    <div class="">
+      <i class="ta-icon ic-file-edit"></i>
+      <code>
+      &lt;i class="ta-icon ic-file-edit"&gt;&lt;/i&gt;
+    </code>
+    </div>
+    <div class="">
+      <i class="ta-icon ic-file-view"></i>
+      <code>
+      &lt;i class="ta-icon ic-file-view"&gt;&lt;/i&gt;
+    </code>
+    </div>
+    <div class="">
+      <i class="ta-icon ic-attach"></i>
+      <code>
+      &lt;i class="ta-icon ic-attach"&gt;&lt;/i&gt;
+    </code>
+    </div>
+    <div class="">
+      <i class="ta-icon ic-deregister"></i>
+      <code>
+      &lt;i class="ta-icon ic-deregister"&gt;&lt;/i&gt;
+    </code>
+    </div>
+    <div class="">
+      <i class="ta-icon ic-approve"></i>
+      <code>
+      &lt;i class="ta-icon ic-approve"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+    <div class="">
+      <i class="ta-icon ic-bad-debt-paid"></i>
+      <code>
+      &lt;i class="ta-icon ic-bad-debt-paid"&gt;&lt;/i&gt;
+    </code>
+    </div>
+
+  </div>
+</body>
+</html>
