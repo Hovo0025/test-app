@@ -1,12 +1,12 @@
 <mat-card>
   <div class="d-flex justify-end search-btns mb-4">
-    <button mat-flat-button color="primary">
+    <button mat-flat-button color="primary" routerLink="../create">
       Create Employee
     </button>
   </div>
   <div class="w-100">
     <app-table
-      [dataSource]="dataSource"
+      [dataSource]="(employees$ | async) || []"
       [showPagination]="true"
       [showTableColumn]="true"
       [showIndex]="true"

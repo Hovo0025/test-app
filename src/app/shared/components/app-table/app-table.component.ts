@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
-
 import { RowActionI, TableActionI, TableColumnI } from './app-table.interfaces';
+import { EmployeeItemI } from '@core/intefaces/employees.inteface';
 
-export const PAGE_SIZE_OPTIONS: number[] = [10, 20, 50]; // TODO move
+export const PAGE_SIZE_OPTIONS: number[] = [5, 10, 20, 50]; // TODO move
 
 @Component({
   selector: 'app-table',
@@ -12,7 +12,7 @@ export const PAGE_SIZE_OPTIONS: number[] = [10, 20, 50]; // TODO move
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppTableComponent implements OnInit {
-  @Input() dataSource: any[] = [];
+  @Input() dataSource: EmployeeItemI[] = [];
   @Input() columns: TableColumnI[] = [];
   @Input() actions: TableActionI[] = [];
   @Input() pageIndex = 0;

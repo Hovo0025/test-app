@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { PageEvent } from '@angular/material/paginator';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 
-import { EmployeeItemInterface } from '@core/intefaces/employees.inteface';
+import { EmployeeItemI } from '@core/intefaces/employees.inteface';
 import { TableActionI, TableColumnI } from '@shared/components/app-table/app-table.interfaces';
 
 @Component({
@@ -14,16 +15,16 @@ import { TableActionI, TableColumnI } from '@shared/components/app-table/app-tab
 export class EmployeesTableComponent implements OnInit {
   readonly constructorName = 'EmployeesTableComponent';
 
-  @Input() dataSource: EmployeeItemInterface[] = [];
-  @Input() pageIndex = 0;
+  @Input() employees$: Observable<EmployeeItemI[]> = of([]);
+  @Input() pageIndex: any;
   @Input() totalItems = 0;
+
   @Output() pageChange = new EventEmitter<PageEvent>();
-  @Output() downloadReport = new EventEmitter<void>();
 
   readonly columns$ = new BehaviorSubject<TableColumnI[]>([]);
   readonly actions$ = new BehaviorSubject<TableActionI[]>([]);
 
-  constructor() {
+  constructor(private readonly router: Router) {
   }
 
   ngOnInit(): void {
@@ -33,8 +34,13 @@ export class EmployeesTableComponent implements OnInit {
   private initTable() {
     this.columns$.next([
       {
-        key: 'name',
-        label: 'Name',
+        key: 'firstName',
+        label: 'First Name',
+        sortable: true,
+      },
+      {
+        key: 'lastName',
+        label: 'Last Name',
         sortable: true,
       },
       {
@@ -63,8 +69,8 @@ export class EmployeesTableComponent implements OnInit {
         sortable: true,
       },
       {
-        key: 'address',
-        label: 'Address',
+        key: 'registered',
+        label: 'Registered date',
         sortable: true,
       }
     ]);
@@ -83,10 +89,10 @@ export class EmployeesTableComponent implements OnInit {
     ])
   }
 
-  public onRowAction(action: any): void {
+  public onRowAction(action: any): void { // TODO add action type
     switch (action.key) {
       case 'edit':
-        // TODO emit edit
+        this.router.navigate([`/employee/edit/${action.row.id}`])
         break
       case 'delete':
         // TODO emit delete

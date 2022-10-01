@@ -18,8 +18,7 @@ const routes: Routes = [
       },
       { path: '**', redirectTo: 'employee' }
     ],
-  },
-
+  }
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],

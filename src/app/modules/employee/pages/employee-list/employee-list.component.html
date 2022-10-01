@@ -1,6 +1,6 @@
 <app-employees-table
-  [dataSource]="(employees$ | async) || []"
-  [pageIndex]="(pagination$ | async)?.pageIndex || 0"
+  [employees$]="employees$"
+  [pageIndex]="(filterValue$ | async)?.pageIndex || 0"
   [totalItems]="(totalItems$ | async) || 0"
-  (pageChange)="pagination$.next($event)">
+  (pageChange)="onPageChange($event)">
 </app-employees-table>

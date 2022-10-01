@@ -1,0 +1,128 @@
+<div class="d-flex mb-4">
+  <span class="pointer back-btn" (click)="back()">
+    <i class="ta-icon ic-back-arrow pr-2"></i>
+    Back
+  </span>
+</div>
+
+<mat-card>
+  <form [formGroup]="createEmployeeForm">
+    <div class="row mb-4 justify-between">
+      <div class="col-12 col-sm-6 col-xl-4 mb-3">
+        <mat-label>First Name</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput trim="blur" formControlName="firstName" placeholder="First Name">
+        </mat-form-field>
+        <ng-container *ngIf="createEmployeeForm.get('firstName') as control">
+          <ng-container *ngIf="control.invalid && control.touched">
+            <mat-error *ngIf="control.hasError('required')">
+              Filed is required
+            </mat-error>
+            <mat-error *ngIf="control.hasError('maxlength')">
+              {{ 'Max length is ' + nameMinLength }}
+            </mat-error>
+            <mat-error *ngIf="control.hasError('minlength')">
+              {{ 'Min length is ' + this.nameMinLength }}
+            </mat-error>
+          </ng-container>
+        </ng-container>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-4 mb-3">
+        <mat-label>Last Name</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput trim="blur" formControlName="lastName" placeholder="Last Name">
+        </mat-form-field>
+        <ng-container *ngIf="createEmployeeForm.get('lastName') as control">
+          <ng-container *ngIf="control.invalid && control.touched">
+            <mat-error *ngIf="control.hasError('required')">
+              Filed is required
+            </mat-error>
+            <mat-error *ngIf="control.hasError('maxlength')">
+              {{ 'Max length is ' + nameMinLength }}
+            </mat-error>
+            <mat-error *ngIf="control.hasError('minlength')">
+              {{ 'Min length is ' + this.nameMinLength }}
+            </mat-error>
+          </ng-container>
+        </ng-container>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-4 mb-3">
+        <mat-label>Age</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput trim="blur" formControlName="age" placeholder="Age">
+        </mat-form-field>
+        <ng-container *ngIf="createEmployeeForm.get('age') as control">
+          <ng-container *ngIf="control.invalid && control.touched">
+            <mat-error *ngIf="control.hasError('required')">
+              Filed is required
+            </mat-error>
+            <mat-error *ngIf="control.hasError('number')">
+              Value must be number
+            </mat-error>
+          </ng-container>
+        </ng-container>
+      </div>
+
+
+      <div class="col-12 col-sm-6 col-xl-4 mb-3">
+        <mat-label>Gender</mat-label>
+        <mat-form-field appearance="outline">
+          <mat-select disableOptionCentering id="gender" aria-label="gender" formControlName="gender">
+            <mat-option value="male">Male</mat-option>
+            <mat-option value="female">Female</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <ng-container *ngIf="createEmployeeForm.get('gender') as control">
+          <ng-container *ngIf="control.invalid && control.touched">
+            <mat-error *ngIf="control.hasError('required')">
+              Filed is required
+            </mat-error>
+          </ng-container>
+        </ng-container>
+      </div>
+
+      <div class="col-12 col-sm-6 col-xl-4 mb-3">
+        <mat-label>Company</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput trim="blur" formControlName="company" placeholder="Company">
+        </mat-form-field>
+      </div>
+
+      <div class="col-12 col-sm-6 col-xl-4 mb-3">
+        <mat-label>Email</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput trim="blur" formControlName="email" placeholder="Email">
+        </mat-form-field>
+        <ng-container *ngIf="createEmployeeForm.get('email') as control">
+          <ng-container *ngIf="control.invalid && control.touched">
+            <mat-error *ngIf="control.hasError('required')">
+              Filed is required
+            </mat-error>
+            <mat-error *ngIf="control.hasError('invalidEmail')">
+              Invalid email
+            </mat-error>
+          </ng-container>
+        </ng-container>
+      </div>
+
+      <div class="col-12 col-sm-6 col-xl-4 mb-3">
+        <mat-label>Phone</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput trim="blur" formControlName="phone" placeholder="Phone">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="col-12">
+      <mat-divider></mat-divider>
+    </div>
+    <div class="w-100">
+      <div class="d-flex justify-end">
+        <button mat-flat-button color="primary" type="button"
+                (click)="onEditEmployee()">
+          Edit
+        </button>
+      </div>
+    </div>
+  </form>
+</mat-card>
+

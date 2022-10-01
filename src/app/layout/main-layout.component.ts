@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import {MenuItem} from './interfaces';
+import { MenuItem } from './interfaces';
 
 @Component({
   selector: 'app-main-layout',
